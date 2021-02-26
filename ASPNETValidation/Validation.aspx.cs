@@ -19,6 +19,7 @@ namespace ASPNETValidation
             string str = args.Value;
             
             args.IsValid = false;
+
             //checking for input length greater than 6 and less than 25 characters  
             if (str.Length < 6 || str.Length > 25)
             {
@@ -66,6 +67,14 @@ namespace ASPNETValidation
                 return;
             }
             args.IsValid = true;
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            if (Page.IsValid)
+            {
+                
+            }
         }
     }
 }

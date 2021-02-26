@@ -1,18 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Validation.aspx.cs" Inherits="ASPNETValidation.Validation" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-     <div>  
-        <asp:Label ID="Label2" runat="server" Text="User ID:"></asp:Label>  
- <asp:TextBox ID="TextBox6" runat="server"></asp:TextBox>  
- <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server"   
-            ControlToValidate="TextBox1" ErrorMessage="User id required"></asp:RequiredFieldValidator>   
-    
-        <asp:CustomValidator ID="CustomValidator1" runat="server" OnServerValidate="UserCustomValidate"  
-            ControlToValidate="TextBox1"   
-            ErrorMessage="User ID should have at least a capital, small and digit and should be greater than 5 and less  
-than 26 letters"   
-            SetFocusOnError="True"></asp:CustomValidator>  
-        </div>  
+     
     <div>
         <asp:Label ID="Label3" runat="server" Style="top: 241px; left: 70px; position: absolute; height: 22px; width: 128px; bottom: 282px;"
             Text="Enter your email id:"></asp:Label>
@@ -26,7 +15,7 @@ than 26 letters"
     </div>
     <p>
         <asp:Button ID="Button1" runat="server" Style="top: 311px; left: 267px; position: absolute; height: 26px; width: 61px"
-            Text="Submit" />
+            Text="Submit" OnClick="Button1_Click" />
     </p>
     <asp:TextBox ID="TextBox3" runat="server" Style="top: 145px; left: 217px; position: absolute; height: 22px; width: 131px"
         TextMode="Password"></asp:TextBox>
@@ -59,5 +48,17 @@ than 26 letters"
     <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" Style="top: 234px; left: 366px; position: absolute; height: 22px; width: 177px"
         ErrorMessage="RegularExpressionValidator" ControlToValidate="TextBox5"
         ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+        <asp:Label ID="Label2" runat="server" Text="User ID:"></asp:Label>  
+ <asp:TextBox ID="TextBox6" runat="server"></asp:TextBox>  
+ <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server"   
+            ControlToValidate="TextBox1" ErrorMessage="User id required"></asp:RequiredFieldValidator>   
+    
+        <asp:CustomValidator ID="CustomValidator1" runat="server" OnServerValidate="UserCustomValidate"  
+            ControlToValidate="TextBox1"   
+            ErrorMessage="User ID should have at least a capital, small and digit and should be greater than 5 and less  
+than 26 letters"   
+            SetFocusOnError="True"></asp:CustomValidator>  
+    
     <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
 </asp:Content>
